@@ -8,6 +8,16 @@
 
 using namespace std;
 
+void error_tipoDeDato_invalido(string tipo_dato, int numero_linea){
+    cout 
+        << "Error en linea "
+        << numero_linea + 1
+        << ", debido a que '"
+        << tipo_dato 
+        << "' no es tipo de dato valido.\n\n" <<
+    endl;
+}
+
 void error_identificador_invalido(string identificador, int numero_linea){
     cout 
         << "Error en linea "

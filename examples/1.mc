@@ -1,3 +1,2 @@
-numerof : entero
+numerof 3: entero
 cedula : logico
-nombreh5$ : cadena

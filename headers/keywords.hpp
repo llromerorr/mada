@@ -60,3 +60,16 @@ vector<string> keywords = {
     PROCEDIMIENTO,
     FIN_PROCEDIMIENTO
 };
+
+// Recibe un string 'dataType' y busca en los tipos de
+// datos vector<string> dataTypes y determia si es un
+// tipo de dato valido.
+bool isDataType(string data_type){
+    bool esValido = true;
+    vector<string>::iterator it = find(dataTypes.begin(), dataTypes.end(), data_type);
+
+    if(it == dataTypes.end())
+        esValido = false;
+
+    return esValido;
+}

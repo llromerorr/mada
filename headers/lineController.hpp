@@ -6,6 +6,7 @@
 #include <regex>
 #include "regexExpresions.hpp"
 #include "errores.hpp"
+#include "keywords.hpp"
 
 
 using namespace std;
@@ -28,12 +29,24 @@ const string fullStrip(string input){
 bool posibleDeclaracionSimple(string linea, int numero_linea){
     bool esValida = true;
     string identificador = fullStrip(linea.substr(0, linea.find(':')));
+    string tipoDeDato = fullStrip(linea.substr(linea.find(':') + 1, linea.length()));
 
     // verificar si el identificador es valido
     if(regex_match(identificador, IDENTIFICADOR)){
-        cout << "el identificador: " << identificador << " es valido" << endl;
+        
+        // verificar si el tipo de dato es valido
+        if(isDataType(tipoDeDato)){
+            cout << tipoDeDato << " es valido" << endl;
+        }
+
+        // El tipo de dato es valido
+        else {
+            error_tipoDeDato_invalido(tipoDeDato, numero_linea);
+            esValida = false;
+        }
     }
 
+    // El identificador no es valido
     else {
         error_identificador_invalido(identificador, numero_linea);
         esValida = false;
