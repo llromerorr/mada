@@ -20,8 +20,7 @@ const string ENTERO = "entero";
 const string REAL = "real";
 const string LOGICO = "logico";
 const string CADENA = "cadena";
-const string ARCHIVO = "archivo";
-const string ARREGLO = "arreglo";
+const string CARACTER = "caracter";
 
 // acciones nominadas
 const string FUNCION = "funcion";
@@ -33,7 +32,9 @@ const string FIN_PROCEDIMIENTO = "fprocedimiento";
 vector<string> dataTypes {
     ENTERO,
     REAL,
-    LOGICO
+    LOGICO,
+    CARACTER,
+    CADENA
 };
 
 // Vector que contiene las palabras reservadas
@@ -50,9 +51,8 @@ vector<string> keywords = {
     ENTERO,
     REAL,
     LOGICO,
+    CARACTER,
     CADENA,
-    ARCHIVO,
-    ARREGLO,
 
     // ACCIONES NOMINADAS
     FUNCION,

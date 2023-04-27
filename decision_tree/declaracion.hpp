@@ -22,8 +22,12 @@ bool declaracionSimple(string linea, int numero_linea){
         
         // verificar si el tipo de dato es valido
         if(isDataType(tipoDeDato)){
-            // Declara la variable
-            variables_declarar_entero(identificador);
+            // declarar variable, pero en caso de que retorne false
+            // se mostrara un error
+            if(!variables_declarar(identificador, tipoDeDato)){
+                
+            }
+            
         }
 
         // El tipo de dato es valido
