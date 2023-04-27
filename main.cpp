@@ -6,19 +6,17 @@
 #include "headers/lineController.hpp"
 #include "headers/regexExpresions.hpp"
 #include "gestion_memoria/variables.hpp"
-#include <regex>
-#include <map>
-
-using namespace std;
+#include "decision_tree/identificarLinea.hpp"
+#include <cstdlib>
 
 int main(int argc, char * argv[]){
+    // Vector que contiene todas las lineas del archivo .mc
     vector<string> lineas = fileToVector(argv[1]);
 
-    for (int i = 0; i < lineas.size(); i++){
+    for (int i = 0; i < lineas.size(); i++)
         // si se encuentra algun error detener el interprete
         if(!indentificarLinea(lineas[i], i))
             break;
-    }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

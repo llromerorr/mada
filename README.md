@@ -8,7 +8,7 @@ Mada soporta los siguientes tipos de datos:
 
 | Tipo    | Soportado | Declaración | Asignación | Operadores |
 |---------|-----------|-------------|------------|------------|
-| Entero  | ❌        | ❌          | ❌         | ❌         |
+| Entero  | ❌        | ✅          | ❌         | ❌         |
 | Real    | ❌        | ❌          | ❌         | ❌         |
 | Lógico  | ❌        | ❌          | ❌         | ❌         |
 | Cadena  | ❌        | ❌          | ❌         | ❌         |
