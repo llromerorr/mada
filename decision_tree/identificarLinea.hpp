@@ -17,10 +17,20 @@ using namespace std;
 bool indentificarLinea(string linea, int numero_linea){
 
     bool esValida = true;
+    
+    // linea vacia
+    if(linea == ""){
+        // no hacer nada
+    }
 
-    // Declaracion siemple de una variable
-    if(regex_match(linea, POSIBLE_DECLARACION_SIMPLE)){
+    // Declaracion simple de una variable
+    else if(regex_match(linea, POSIBLE_DECLARACION_SIMPLE)){
         esValida = declaracionSimple(linea, numero_linea);
+    }
+
+    // Declaracion multiple de variables de un mismo tipo
+    else if(regex_match(linea, POSIBLE_DECLARACION_MULTIPLE)){
+        esValida = declaracionMultiple(linea, numero_linea);
     }
     
     // La linea no contiiene una instruccion valida
