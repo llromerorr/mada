@@ -9,13 +9,14 @@
 #include "decision_tree/identificarLinea.hpp"
 #include <cstdlib>
 
-int main(int argc, char * argv[]){
+int main(int argc, char *argv[])
+{
     // Vector que contiene todas las lineas del archivo .mc
     vector<string> lineas = fileToVector(argv[1]);
 
     for (int i = 0; i < lineas.size(); i++)
         // si se encuentra algun error detener el interprete
-        if(!indentificarLinea(lineas[i], i))
+        if (!indentificarLinea(lineas[i], i))
             break;
 
     return EXIT_SUCCESS;

@@ -8,11 +8,11 @@ Mada soporta los siguientes tipos de datos:
 
 | Tipo    | Soportado | Declaración | Asignación | Operadores |
 |---------|-----------|-------------|------------|------------|
-| Entero  | ❌        | ✅          | ❌         | ❌         |
-| Real    | ❌        | ✅          | ❌         | ❌         |
-| Lógico  | ❌        | ✅          | ❌         | ❌         |
-| Cadena  | ❌        | ✅          | ❌         | ❌         |
-| Carácter| ❌        | ✅          | ❌         | ❌         |
+| Entero  | ✅        | ✅          | ❌         | ❌         |
+| Real    | ✅        | ✅          | ❌         | ❌         |
+| Lógico  | ✅        | ✅          | ❌         | ❌         |
+| Cadena  | ✅        | ✅          | ❌         | ❌         |
+| Carácter| ✅        | ✅          | ❌         | ❌         |
 
 ## Estructuras condicionales
 
