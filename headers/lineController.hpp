@@ -33,3 +33,27 @@ void replaceAll(std::string& str, const std::string& from, const std::string& to
         start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
     }
 }
+
+void transformar_string(string *expresion){
+    string ops_pseudo[]={"**","div", "mod","~", "¬"};
+    string ops_reales[]={"^","/", "%", "not"};
+
+    //TRANSFORMAR EXPONENCIACION
+    replaceAll(*expresion,ops_pseudo[0],ops_reales[0]);
+    
+    //TRANSFORMAR OPERADOR DIV
+        //BUSCAR Y REEMPLAZAR CON REGEX_REPLACE
+        regex regexp("[[ ]div[ ]"); 
+        std::string output = std::regex_replace(*expresion, regexp, "/");
+        *expresion=output;
+
+    //TRANSFORMAR OPERADOR MOD
+        //BUSCAR Y REEMPLAZAR CON REGEX_REPLACE
+        regex regexp2("[[ ]mod[ ]"); 
+        std::string output2 = std::regex_replace(*expresion, regexp2, "%");
+        *expresion=output2;
+
+    //TRANSFORMAR OPERADOR NOT
+    replaceAll(*expresion,ops_pseudo[3],ops_reales[3]);
+    replaceAll(*expresion,ops_pseudo[4],ops_reales[3]);
+}
