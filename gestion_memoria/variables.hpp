@@ -18,7 +18,7 @@ bool variables_declarar_real(string identificador);
 bool variables_declarar_logico(string identificador);
 bool variables_declarar_caracter(string identificador);
 bool variables_declarar_cadena(string identificador);
-
+bool variables_existe(string identificador);
 
 bool variables_declarar(string identificador, string tipo){
     bool operacion_exitososa = true;
@@ -176,4 +176,9 @@ bool variables_obtener_real(string identificador, float* variable){
         operacionExitosa = false;
 
     return operacionExitosa;
+}
+
+// esta funcion retorna true si la variable fue declarada
+bool variables_existe(string identificador){
+    return tipos.contains(identificador);
 }

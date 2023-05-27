@@ -31,6 +31,17 @@ void error_identificador_invalido(string identificador, int numero_linea){
     endl;
 }
 
+void error_identificador_redeclaracion(string identificador, int numero_linea){
+    cout 
+        << "Error en linea "
+        << numero_linea + 1
+        << ", debido a que '"
+        << identificador 
+        << "' ha sido redeclarado.\n\n"
+        << "Sugerencia: usa identificadores únicos y distintos para evitar errores." <<
+    endl;
+}
+
 void error_linea_invalida(string linea, int numero_linea){
     cout 
         << "Error en linea "
@@ -43,5 +54,17 @@ void error_linea_invalida(string linea, int numero_linea){
         << "comas y los puntos están bien colocados y que no hay caracteres extraños o "
         << "faltantes. Consulte la documentación del lenguaje o un manual de referencia "
         << "para ver ejemplos de cómo escribir correctamente las instrucciones." << 
+    endl;
+}
+
+void error_memoria_insuficiente(string identificador, string tipoDeDato, int numero_linea){
+    cout 
+        << "Error de insuficiencia de momoria, al ejecutar la linea "
+        << numero_linea + 1
+        << ", debido a que no se pudo asignar memoria a '"
+        << identificador
+        << "', que es una variable de tipo '"
+        << tipoDeDato
+        << "'." << 
     endl;
 }
