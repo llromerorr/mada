@@ -25,8 +25,8 @@ void error_identificador_invalido(string identificador, int numero_linea){
         << ", debido a que '"
         << identificador 
         << "' no es indenficador valido.\n\n"
-        << "AsegÃºrese de que el nombre empiece con una letra o un guion bajo, "
-        << "no contenga espacios ni caracteres especiales, y no sea una palabra "
+        << "El mismo debe empezar con una letra o un guion bajo, "
+        << "no debe contener espacios ni caracteres especiales, y no ser una palabra "
         << "reservada del lenguaje." << 
     endl;
 }
@@ -38,7 +38,7 @@ void error_identificador_redeclaracion(string identificador, int numero_linea){
         << ", debido a que '"
         << identificador 
         << "' ha sido redeclarado.\n\n"
-        << "Sugerencia: usa identificadores Ãºnicos y distintos para evitar errores." <<
+        << "Sugerencia: usa identificadores únicos y distintos para evitar errores." <<
     endl;
 }
 
@@ -49,17 +49,16 @@ void error_linea_invalida(string linea, int numero_linea){
         << ", debido a que '"
         << linea 
         << "' no es instruccion valida.\n\n"
-        << "Revise la escritura de la instrucciÃ³n y asegÃºrese de que se siguen las "
-        << "reglas del lenguaje. Verifique que los parÃ©ntesis, las comillas y los "
-        << "comas y los puntos estÃ¡n bien colocados y que no hay caracteres extraÃ±os o "
-        << "faltantes. Consulte la documentaciÃ³n del lenguaje o un manual de referencia "
-        << "para ver ejemplos de cÃ³mo escribir correctamente las instrucciones." << 
+        << "Revise si la sintaxis de la instrucción es correcta. Al hacerlo verifique que los paréntesis"
+        << "y los signos de puntuación estén bien colocados y que no haya caracteres extraños o "
+        << "faltantes. Consulte la documentación del lenguaje o un manual de referencia "
+        << "para ver ejemplos de cómo escribir correctamente las instrucciones." << 
     endl;
 }
 
 void error_memoria_insuficiente(string identificador, string tipoDeDato, int numero_linea){
     cout 
-        << "Error de insuficiencia de momoria, al ejecutar la linea "
+        << "Error de insuficiencia de memoria, al ejecutar la linea "
         << numero_linea + 1
         << ", debido a que no se pudo asignar memoria a '"
         << identificador
